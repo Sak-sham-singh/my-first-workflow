@@ -1,1 +1,14 @@
+name: PR Workflow
 
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Show PR message
+        run: echo "Pull Request triggered workflow!"
