@@ -1,12 +1,15 @@
 name: PR Workflow
 
-on:
-  pull_request:
+on: [push,pull_request]
 
 jobs:
-  check:
+  say-hello:
     runs-on: ubuntu-latest
-
+    steps:
+      - name: print message
+        run: echo"Hello from First Job:" 
+  say-bye:
+    runs-on: ubuntu-latest
     steps:
       - name: Print message
-        run: echo "Hello, this is my workflow!"
+        run: echo"bye from SEcond Job:"
