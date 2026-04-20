@@ -1,15 +1,23 @@
-name: PR Workflow
+name: My first WorkFlow
 
-on: [push,pull_request]
+on:
+  push:
+  pull_request:
 
 jobs:
   say-hello:
     runs-on: ubuntu-latest
-    steps:
-      - name: print message
-        run: echo"Hello from First Job:" 
-  say-bye:
-    runs-on: ubuntu-latest
+
     steps:
       - name: Print message
-        run: echo"bye from SEcond Job:"
+        run: |
+          echo "Hello, Github Action!"
+          echo "Testing pr setup"
+
+  say-bye:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print message
+        run: |
+          echo "bye from 2nd job"
